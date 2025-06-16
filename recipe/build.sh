@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ex
 
 pushd streamlit_antd_components/frontend
 npm install antd@5.15.1 --save-exact
