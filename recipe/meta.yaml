@@ -10,12 +10,12 @@ source:
   sha256: 82958f1b167dd6ad2972d7b5ddc303d78a6645d3b62ea08e4b2723837b642143
 
 build:
-  # streamlit not available on s390x
-  skip: True  # [s390x or py<38]
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  skip: True  # [py<38]
+  number: 1
 
 requirements:
+  build:
+    - nodejs ==16
   host:
     - python
     - pip
